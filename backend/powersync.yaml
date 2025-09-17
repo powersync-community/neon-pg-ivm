@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://unpkg.com/@powersync/service-schema@latest/json-schema/powersync-config.json
+
+port: 8080
+
+replication:
+  connections:
+    - type: postgresql
+      uri: !env PS_POSTGRESQL_URI
+
+storage:
+  type: postgresql
+  uri: !env PS_POSTGRESQL_URI
+
+sync_rules:
+  content: |
+    bucket_definitions:
+      global:
+        data:
+          - SELECT * FROM lists
+          - SELECT * FROM todos
+
+client_auth:
+  jwks_uri: 
+    - !env PS_JWKS_URI
+  audience:
+    - !env PS_STACK_PROJECT_ID

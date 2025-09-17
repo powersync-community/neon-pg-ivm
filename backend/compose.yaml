@@ -1,0 +1,10 @@
+services:
+  powersync:
+    container_name: powersync_demo   
+    restart: unless-stopped
+    image: journeyapps/powersync-service:latest
+    volumes:
+      - ./powersync.yaml:/app/powersync.yaml
+    env_file: ../.env
+    ports:
+      - 8080:8080

@@ -1,0 +1,5 @@
+onlyBuiltDependencies:
+  - '@powersync/better-sqlite3'
+  - '@powersync/node'
+  - esbuild
+  - supabase

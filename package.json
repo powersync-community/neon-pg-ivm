@@ -1,0 +1,26 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "node --experimental-strip-types src/index.ts",
+    "powersync:up": "docker compose -f backend/compose.yaml up",
+    "powersync:down": "docker compose -f backend/compose.yaml down",
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.1",
+    "@powersync/node": "^0.10.1",
+    "@stackframe/js": "^2.8.36"
+  },
+  "devDependencies": {
+    "dotenv": "^17.1.0",
+    "vitest": "^3.2.4"
+  },
+  "packageManager": "pnpm@10.12.1+sha512.f0dda8580f0ee9481c5c79a1d927b9164f2c478e90992ad268bbb2465a736984391d6333d2c327913578b2804af33474ca554ba29c04a8b13060a717675ae3ac"
+}
